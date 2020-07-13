@@ -1,0 +1,11 @@
+D:\THLVN\lb\LB\LB\bin\Debug\LB.exe.config
+D:\THLVN\lb\LB\LB\bin\Debug\LB.exe
+D:\THLVN\lb\LB\LB\bin\Debug\LB.pdb
+D:\THLVN\lb\LB\LB\obj\Debug\LB.csprojAssemblyReference.cache
+D:\THLVN\lb\LB\LB\obj\Debug\LB.Properties.Resources.resources
+D:\THLVN\lb\LB\LB\obj\Debug\LB.csproj.GenerateResource.cache
+D:\THLVN\lb\LB\LB\obj\Debug\LB.csproj.CoreCompileInputs.cache
+D:\THLVN\lb\LB\LB\obj\Debug\LB.exe
+D:\THLVN\lb\LB\LB\obj\Debug\LB.pdb
+D:\THLVN\lb\LB\LB\obj\Debug\LB.Trangchu.resources
+D:\THLVN\lb\LB\LB\obj\Debug\LB.Đoimk.resources
