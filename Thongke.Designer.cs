@@ -37,6 +37,12 @@
             this.btnhuy = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,11 +51,11 @@
             this.cbsearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbsearch.FormattingEnabled = true;
             this.cbsearch.Items.AddRange(new object[] {
-            "Tg",
-            "matt",
-            "tentt",
-            "hd",
-            "chitiet"});
+            "Thời gian",
+            "Mã thủ thư",
+            "Tên thủ thư",
+            "Hoạt động",
+            "Chi tiết"});
             this.cbsearch.Location = new System.Drawing.Point(181, 65);
             this.cbsearch.Name = "cbsearch";
             this.cbsearch.Size = new System.Drawing.Size(121, 24);
@@ -64,7 +70,6 @@
             this.txtsearch.TabIndex = 1;
             this.txtsearch.Text = "nhập từ tìm kiếm";
             this.txtsearch.Click += new System.EventHandler(this.txtsearch_Click);
-            this.txtsearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnin
             // 
@@ -89,6 +94,12 @@
             // dgv
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dgv.Location = new System.Drawing.Point(38, 153);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersWidth = 51;
@@ -120,11 +131,62 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "tg";
+            this.Column1.HeaderText = "Thời gian";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "matt";
+            this.Column2.HeaderText = "Mã thủ thư";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "tentt";
+            this.Column3.HeaderText = "Tên thủ thư";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "hd";
+            this.Column4.HeaderText = "Hoạt động";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.DataPropertyName = "chitiet";
+            this.Column5.HeaderText = "Chi tiết";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(540, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 24);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "OK";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Thongke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 484);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnhuy);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.label1);
@@ -150,5 +212,11 @@
         private System.Windows.Forms.Button btnhuy;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button button1;
     }
 }

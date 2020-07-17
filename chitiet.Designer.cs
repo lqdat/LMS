@@ -41,23 +41,23 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtcoht = new System.Windows.Forms.Label();
+            this.coht = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.anh = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtmatt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tglv = new System.Windows.Forms.Label();
-            this.txtgt = new System.Windows.Forms.Label();
+            this.gt = new System.Windows.Forms.Label();
             this.ckna = new System.Windows.Forms.CheckBox();
             this.cknu = new System.Windows.Forms.CheckBox();
-            this.textemail = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtsdt = new System.Windows.Forms.TextBox();
             this.sdt = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lbmatt = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.anh)).BeginInit();
             this.SuspendLayout();
             // 
             // btnbr
@@ -71,7 +71,7 @@
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(481, 494);
+            this.btnadd.Location = new System.Drawing.Point(481, 507);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(99, 37);
             this.btnadd.TabIndex = 48;
@@ -165,14 +165,14 @@
             this.label7.TabIndex = 33;
             this.label7.Text = "CMND/CCCD/GPLX";
             // 
-            // txtcoht
+            // coht
             // 
-            this.txtcoht.AutoSize = true;
-            this.txtcoht.Location = new System.Drawing.Point(218, 274);
-            this.txtcoht.Name = "txtcoht";
-            this.txtcoht.Size = new System.Drawing.Size(95, 17);
-            this.txtcoht.TabIndex = 32;
-            this.txtcoht.Text = "Chỗ ở hiện tại";
+            this.coht.AutoSize = true;
+            this.coht.Location = new System.Drawing.Point(218, 274);
+            this.coht.Name = "coht";
+            this.coht.Size = new System.Drawing.Size(95, 17);
+            this.coht.TabIndex = 32;
+            this.coht.Text = "Chỗ ở hiện tại";
             // 
             // label5
             // 
@@ -201,14 +201,14 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Họ và Tên";
             // 
-            // pictureBox1
+            // anh
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(50, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 138);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 50;
-            this.pictureBox1.TabStop = false;
+            this.anh.Location = new System.Drawing.Point(50, 20);
+            this.anh.Name = "anh";
+            this.anh.Size = new System.Drawing.Size(117, 138);
+            this.anh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.anh.TabIndex = 50;
+            this.anh.TabStop = false;
             // 
             // label1
             // 
@@ -218,13 +218,6 @@
             this.label1.Size = new System.Drawing.Size(75, 17);
             this.label1.TabIndex = 51;
             this.label1.Text = "Mã thủ thư";
-            // 
-            // txtmatt
-            // 
-            this.txtmatt.Location = new System.Drawing.Point(389, 56);
-            this.txtmatt.Name = "txtmatt";
-            this.txtmatt.Size = new System.Drawing.Size(191, 22);
-            this.txtmatt.TabIndex = 52;
             // 
             // label3
             // 
@@ -240,18 +233,18 @@
             this.tglv.AutoSize = true;
             this.tglv.Location = new System.Drawing.Point(396, 439);
             this.tglv.Name = "tglv";
-            this.tglv.Size = new System.Drawing.Size(54, 17);
+            this.tglv.Size = new System.Drawing.Size(44, 17);
             this.tglv.TabIndex = 54;
-            this.tglv.Text = "label10";
+            this.tglv.Text = "txttglv";
             // 
-            // txtgt
+            // gt
             // 
-            this.txtgt.AutoSize = true;
-            this.txtgt.Location = new System.Drawing.Point(218, 205);
-            this.txtgt.Name = "txtgt";
-            this.txtgt.Size = new System.Drawing.Size(60, 17);
-            this.txtgt.TabIndex = 55;
-            this.txtgt.Text = "Giới tính";
+            this.gt.AutoSize = true;
+            this.gt.Location = new System.Drawing.Point(218, 205);
+            this.gt.Name = "gt";
+            this.gt.Size = new System.Drawing.Size(60, 17);
+            this.gt.TabIndex = 55;
+            this.gt.Text = "Giới tính";
             // 
             // ckna
             // 
@@ -273,12 +266,12 @@
             this.cknu.Text = "Nữ";
             this.cknu.UseVisualStyleBackColor = true;
             // 
-            // textemail
+            // txtemail
             // 
-            this.textemail.Location = new System.Drawing.Point(389, 349);
-            this.textemail.Name = "textemail";
-            this.textemail.Size = new System.Drawing.Size(191, 22);
-            this.textemail.TabIndex = 59;
+            this.txtemail.Location = new System.Drawing.Point(389, 349);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(191, 22);
+            this.txtemail.TabIndex = 59;
             // 
             // label11
             // 
@@ -305,23 +298,32 @@
             this.sdt.TabIndex = 60;
             this.sdt.Text = "SĐT";
             // 
+            // lbmatt
+            // 
+            this.lbmatt.AutoSize = true;
+            this.lbmatt.Location = new System.Drawing.Point(389, 60);
+            this.lbmatt.Name = "lbmatt";
+            this.lbmatt.Size = new System.Drawing.Size(35, 17);
+            this.lbmatt.TabIndex = 62;
+            this.lbmatt.Text = "matt";
+            // 
             // chitiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 556);
+            this.Controls.Add(this.lbmatt);
             this.Controls.Add(this.txtsdt);
             this.Controls.Add(this.sdt);
-            this.Controls.Add(this.textemail);
+            this.Controls.Add(this.txtemail);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.cknu);
             this.Controls.Add(this.ckna);
-            this.Controls.Add(this.txtgt);
+            this.Controls.Add(this.gt);
             this.Controls.Add(this.tglv);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtmatt);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.anh);
             this.Controls.Add(this.btnbr);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.btnhuy);
@@ -335,14 +337,14 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtcoht);
+            this.Controls.Add(this.coht);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Name = "chitiet";
             this.Text = "chitiet";
             this.Load += new System.EventHandler(this.chitiet_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,21 +365,21 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label txtcoht;
+        private System.Windows.Forms.Label coht;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox anh;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtmatt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label tglv;
-        private System.Windows.Forms.Label txtgt;
+        private System.Windows.Forms.Label gt;
         private System.Windows.Forms.CheckBox ckna;
         private System.Windows.Forms.CheckBox cknu;
-        private System.Windows.Forms.TextBox textemail;
+        private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtsdt;
         private System.Windows.Forms.Label sdt;
+        private System.Windows.Forms.Label lbmatt;
     }
 }

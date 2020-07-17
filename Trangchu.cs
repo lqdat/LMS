@@ -29,16 +29,17 @@ namespace LB
         private void Form1_Load(object sender, EventArgs e)
         {
             load();
-            DataGridViewCheckBoxColumn clm = new DataGridViewCheckBoxColumn();
-            clm.Name = "ckl";
-            clm.HeaderText = "";
-            this.Dgv.Columns.Insert(0, clm);
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-            btn.Name = "btn";
-            btn.HeaderText = "Xem chi tiết";
-            btn.Text = "Xem";
-            btn.UseColumnTextForButtonValue = true;
-            Dgv.Columns.Add(btn);
+            load2();
+            //DataGridViewCheckBoxColumn clm = new DataGridViewCheckBoxColumn();
+            //clm.Name = "ckl";
+            //clm.HeaderText = "Chon";
+            //Dgv.Columns.Insert(3, clm);
+            //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //btn.Name = "btn";
+            //btn.HeaderText = "Xem chi tiết";
+            //btn.Text = "Xem";
+            //btn.UseColumnTextForButtonValue = true;
+            //Dgv.Columns.Insert(4, btn);
 
         }
 
@@ -46,7 +47,10 @@ namespace LB
         {
             this.Hide();
             Thongke tk = new Thongke();
-            tk.Show();
+            this.Hide();
+            tk.ShowDialog();
+            this.Show();
+            load();
         }
 
         private void thembtn_Click(object sender, EventArgs e)
@@ -80,7 +84,7 @@ namespace LB
 
         private void Dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string id = Dgv.Rows[e.RowIndex].Cells[2].Value.ToString();
+            string id = Dgv.Rows[e.RowIndex].Cells[3].Value.ToString();
             chitiet a = new chitiet(id);
             this.Hide();
             a.ShowDialog();
@@ -97,6 +101,7 @@ namespace LB
         {
            DataTable d= con.getdata("select * from NQT where mQT = '" + iD + "' ");
             tenqttxt.Text = d.Rows[0][0].ToString();
+            anh.Image = Image.FromFile(d.Rows[0][2].ToString());
         }
 
         private void xoabtn_Click(object sender, EventArgs e)
@@ -124,7 +129,7 @@ namespace LB
                     {
                         if (Dgv.Rows[i].Cells[0].Value != null)
                         {
-                            con.excute("Delete from thuthu where matt='" + Dgv.Rows[i].Cells[2].Value + "'");
+                            con.excute("Delete from thuthu where matt='" + Dgv.Rows[i].Cells[3].Value + "'");
                             load();
                         }
                     }

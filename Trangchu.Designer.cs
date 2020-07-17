@@ -35,12 +35,14 @@
             this.xoabtn = new System.Windows.Forms.Button();
             this.thembtn = new System.Windows.Forms.Button();
             this.Dgv = new System.Windows.Forms.DataGridView();
+            this.anh = new System.Windows.Forms.PictureBox();
+            this.ckl = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tglv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anh)).BeginInit();
             this.SuspendLayout();
             // 
             // tenqttxt
@@ -54,7 +56,7 @@
             // 
             // doimkbtn
             // 
-            this.doimkbtn.Location = new System.Drawing.Point(628, 5);
+            this.doimkbtn.Location = new System.Drawing.Point(560, 5);
             this.doimkbtn.Name = "doimkbtn";
             this.doimkbtn.Size = new System.Drawing.Size(135, 37);
             this.doimkbtn.TabIndex = 1;
@@ -64,7 +66,7 @@
             // 
             // dangxuatbtn
             // 
-            this.dangxuatbtn.Location = new System.Drawing.Point(789, 5);
+            this.dangxuatbtn.Location = new System.Drawing.Point(742, 5);
             this.dangxuatbtn.Name = "dangxuatbtn";
             this.dangxuatbtn.Size = new System.Drawing.Size(95, 37);
             this.dangxuatbtn.TabIndex = 2;
@@ -107,61 +109,84 @@
             this.Dgv.AllowUserToAddRows = false;
             this.Dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ckl,
             this.tg,
             this.matt,
-            this.tglv});
+            this.tglv,
+            this.btn});
             this.Dgv.Location = new System.Drawing.Point(45, 167);
             this.Dgv.Name = "Dgv";
             this.Dgv.RowHeadersWidth = 51;
             this.Dgv.RowTemplate.Height = 24;
-            this.Dgv.Size = new System.Drawing.Size(839, 336);
+            this.Dgv.Size = new System.Drawing.Size(792, 336);
             this.Dgv.TabIndex = 7;
             this.Dgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_CellContentClick);
             // 
+            // anh
+            // 
+            this.anh.Location = new System.Drawing.Point(12, 5);
+            this.anh.Name = "anh";
+            this.anh.Size = new System.Drawing.Size(121, 131);
+            this.anh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.anh.TabIndex = 8;
+            this.anh.TabStop = false;
+            // 
+            // ckl
+            // 
+            this.ckl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ckl.HeaderText = "Chon";
+            this.ckl.MinimumWidth = 6;
+            this.ckl.Name = "ckl";
+            this.ckl.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ckl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ckl.Width = 70;
+            // 
             // tg
             // 
+            this.tg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tg.DataPropertyName = "tentt";
             this.tg.HeaderText = "tentt";
             this.tg.MaxInputLength = 100;
             this.tg.MinimumWidth = 6;
             this.tg.Name = "tg";
-            this.tg.Width = 125;
             // 
             // matt
             // 
+            this.matt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.matt.DataPropertyName = "matt";
             this.matt.HeaderText = "matt";
             this.matt.MaxInputLength = 100;
             this.matt.MinimumWidth = 6;
             this.matt.Name = "matt";
-            this.matt.Width = 125;
             // 
             // tglv
             // 
+            this.tglv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tglv.DataPropertyName = "tglv";
             this.tglv.HeaderText = "tglv";
             this.tglv.MaxInputLength = 100;
             this.tglv.MinimumWidth = 6;
             this.tglv.Name = "tglv";
-            this.tglv.Width = 125;
             // 
-            // pictureBox1
+            // btn
             // 
-            this.pictureBox1.Image = global::LB.Properties.Resources.danh_sach_cac_tiem_chup_anh_the_lay_ngay_dep_nhat_ha_noi_15653_130862_0;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 131);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.btn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.btn.HeaderText = "Xem chi tiết";
+            this.btn.MinimumWidth = 6;
+            this.btn.Name = "btn";
+            this.btn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btn.Text = "Xem";
+            this.btn.UseColumnTextForButtonValue = true;
+            this.btn.Width = 110;
             // 
             // Trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 515);
+            this.ClientSize = new System.Drawing.Size(880, 515);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.anh);
             this.Controls.Add(this.Dgv);
             this.Controls.Add(this.thembtn);
             this.Controls.Add(this.xoabtn);
@@ -173,7 +198,7 @@
             this.Text = "Trang chủ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,10 +213,12 @@
         private System.Windows.Forms.Button xoabtn;
         private System.Windows.Forms.Button thembtn;
         private System.Windows.Forms.DataGridView Dgv;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox anh;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ckl;
         private System.Windows.Forms.DataGridViewTextBoxColumn tg;
         private System.Windows.Forms.DataGridViewTextBoxColumn matt;
         private System.Windows.Forms.DataGridViewTextBoxColumn tglv;
+        private System.Windows.Forms.DataGridViewButtonColumn btn;
     }
 }
 
